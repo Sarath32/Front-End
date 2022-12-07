@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format SignUp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <div class="container" id="container">
+      <div class ="form-container signup-container">
+         <form action="#">
+           <h1>Create Account</h1>
+           <div class="social-container">
+                <a href="#" class="social"> <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social"> <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social"> <i class="fab fa-google-plus-g"></i>
+                </a>
+           </div>
+           <span>or use your email for registration</span>
+           <input type="text" placeholder="Name">
+           <input type="email" placeholder="Email">
+           <input type="password" placeholder="Password">
+           <button>Sign Up</button>
+         </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>SIGN IN</h1>
+            <div class="social-container">
+                 <a href="#" class="social"> <i class="fab fa-facebook-f"></i>
+                 </a>
+                 <a href="#" class="social"> <i class="fab fa-linkedin-in"></i>
+                 </a>
+                 <a href="#" class="social"> <i class="fab fa-google-plus-g"></i>
+                 </a>
+            </div>
+            <span>or use your account</span>
+           
+            <input type="email" placeholder="Email" id="email" required>
+            <input type="password" placeholder="Password" id="password" required>
+           
+            <button onclick=" window.location.href='auth()'">Sign In</button>
+            
+          </form>
+ 
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlayleft">
+                <h1>
+                    Welcome to TRIOTEND
+                </h1>
+                <p>Kindly refer our webpage</p>
+                <button class="press" id="signIn"> Sign In </button>
+            </div>
+            <div class="overlay-panel overlayright">
+                <h1>
+                   TRIOTEND
+                </h1>
+                <p>Kindly refer our projects</p>
+                <button class="press" id="signUp"> Sign Up </button>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+   <script>
+             const signUPButton=document.getElementById("signUp");
+             const signInButton=document.getElementById("signIn");
+             const container=document.getElementById("container");
+
+             function auth(){
+              var email=document.getElementById("email").value;
+              var password=document.getElementById("password").value;
+              if(email=="asd@gmail.com" && password=="asd"){
+                window.location.assign("Bootstrap.html");
+                
+              }
+             
+             }
+
+             
+             signUPButton.addEventListener('click',()=>{
+                container.classList.add("right-panel-active");
+             })
+             signInButton.addEventListener('click',()=>{
+                container.classList.remove ("right-panel-active");
+             })
+
+             function isEmail(email){
+           
+           return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+       }
+       function required()
+{
+var empt = document.form1.text1.value;
+if (empt === "")
+{
+alert("Please input a Value");
+return false;
+}
+}
+   </script>
+
+</body>
+</html>

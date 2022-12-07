@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+          <div class="user-box">
+            <input type="text" name="" id="email" required />
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="" id="password" required />
+            <label>Password</label>
+          </div>
+          <a href="#" onclick="auth()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Login
+          </a>
+        </form>
+      </div>
+
+      <script>
+           function auth(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if(email=="asd@gmail.com" && password=="asd"){
+                window.location.assign("Basic.html");
+            }
+ ;          }
+      </script>
+</body>
+</html>
